@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url('jpg/bg2.jpg');
+            background-size: cover;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgb(147, 197, 114); 
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            color: #fff; 
+            text-decoration: none;
+            display: flex; 
+            align-items: center; 
+        }
+
+        .navbar-brand img {
+            height: 40px; 
+            margin-right: 10px; 
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            margin-left: 2rem;
+        }
+
+        .navbar a {
+            color: #fff; 
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease; 
+        }
+
+        .navbar a:hover {
+            color: #ddd; 
+        }
+
+        .main-content {
+            margin-top: 80px; 
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+
+        .family-section {
+            max-width: 800px;
+            margin: 0 auto; 
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            text-align: center;
+        }
+
+        .family-section h2 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .family-section p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: auto;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .gallery-item {
+            width: 200px; 
+            height: 200px; 
+            overflow: hidden; 
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .footer {
+            background-color: rgb(147, 197, 114);
+            color: #fff;
+            text-align: center;
+            font-family: serif;
+            padding: 1rem;
+            width: 100%;
+            position: relative;
+            top: auto;
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .navbar li {
+                margin: 0.5rem 0;
+                width: 100%;
+                text-align: left;
+            }
+
+            .main-content {
+                padding: 1rem;
+            }
+
+            .family-section {
+                padding: 1rem;
+            }
+
+            .gallery-item {
+                width: 100%; 
+                height: auto; 
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand"><img src="jpg/logo.png" alt="Logo"></a>
+        <ul>
+            <li><a href="index.html" target="_blank">Home</a></li>
+            <li><a href="me.html" target="_blank">Me</a></li>
+            <li><a href="fam.html" target="_blank">Family</a></li>
+            <li><a href="hob.html" target="_blank">Hobby</a></li>
+            <li><a href="gall.html" target="_blank">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <div class="family-section">
+            <h2>About My Family</h2>
+            <p>Father: Khalid bin Ismail</p>
+            <p>Mother: Nurizah binti Aris</p>
+            <p>Brother: Nor Hazri Izwan (37), Nor Hazrul Izzam (31)</p>
+            <p>Sister: Nur Hazlin Izrina (35), Nurhazlia Izzani (27)</p>
+        </div>
+        <div class="gallery-container">
+            <div class="gallery-item"><a href="jpg/ily2.jpg" target="_blank"><img src="jpg/ily2.jpg" alt="Placeholder Image"></a></div>
+            <div class="gallery-item"><a href="ily.JPG" target="_blank"><img src="ily.JPG" alt="Placeholder Image"></a></div>
+            <div class="gallery-item"><a href="jpg/ily1.JPG" target="_blank"><img src="jpg/ily1.JPG" alt="Placeholder Image"></a></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 HAZZURA IML470. All rights reserved.</p>
+    </footer>
+</body>
+</html>
